@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASTIAN GAMES</title>
+    <meta name="description" content="Cuatro juegos para jugar en el navegador: Pong vs Pared, Pong Dual, Gravity Run y Gravity Run Dual.">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="fonts/tilt-neon-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="site.css">
+</head>
+<body>
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+        <h1>BASTIAN GAMES</h1>
+    </header>
+
+    <main id="juegos">
+        <article class="game">
+            <a class="preview" href="games/pong-pared/" tabindex="-1" aria-hidden="true">
+                <canvas data-preview="wall" width="640" height="360"></canvas>
+            </a>
+            <div class="info">
+                <h2>Pong vs Pared</h2>
+                <p>Devuelve la pelota contra la pared todas las veces que puedas. Cada golpe la acelera y tu récord queda guardado.</p>
+                <dl>
+                    <div><dt>Jugadores</dt><dd>1</dd></div>
+                    <div><dt>Controles</dt><dd><kbd>W</kbd> <kbd>S</kbd> o <kbd>↑</kbd> <kbd>↓</kbd></dd></div>
+                </dl>
+                <a class="play" href="games/pong-pared/">Jugar Pong vs Pared</a>
+            </div>
+        </article>
+
+        <article class="game">
+            <a class="preview" href="games/pong-dual/" tabindex="-1" aria-hidden="true">
+                <canvas data-preview="dual" width="640" height="360"></canvas>
+            </a>
+            <div class="info">
+                <h2>Pong Dual</h2>
+                <p>Reta a otra persona en tiempo real. Abre el juego en dos pestañas o dispositivos, y gana quien llegue a 7 puntos.</p>
+                <dl>
+                    <div><dt>Jugadores</dt><dd>2 en línea</dd></div>
+                    <div><dt>Controles</dt><dd><kbd>W</kbd> <kbd>S</kbd> o <kbd>↑</kbd> <kbd>↓</kbd></dd></div>
+                </dl>
+                <a class="play" href="games/pong-dual/">Jugar Pong Dual</a>
+            </div>
+        </article>
+
+        <article class="game">
+            <a class="preview" href="games/sprite/" tabindex="-1" aria-hidden="true">
+                <canvas data-preview="sprite" width="640" height="360"></canvas>
+            </a>
+            <div class="info">
+                <h2>Gravity Run</h2>
+                <p>Corre contra la máquina por dos pistas galácticas e invierte la gravedad para esquivar obstáculos. El primero que caiga al vacío pierde.</p>
+                <dl>
+                    <div><dt>Jugadores</dt><dd>1 vs máquina</dd></div>
+                    <div><dt>Controles</dt><dd><kbd>↑</kbd> <kbd>↓</kbd> o <kbd>W</kbd> <kbd>S</kbd></dd></div>
+                </dl>
+                <a class="play" href="games/sprite/">Jugar Gravity Run</a>
+            </div>
+        </article>
+
+        <article class="game">
+            <a class="preview" href="games/gravity-dual/" tabindex="-1" aria-hidden="true">
+                <canvas data-preview="gravityDual" width="640" height="360"></canvas>
+            </a>
+            <div class="info">
+                <h2>Gravity Run Dual</h2>
+                <p>Reta a otra persona en tiempo real. Abre el juego en dos pestañas o dispositivos, y quien caiga primero al vacío pierde.</p>
+                <dl>
+                    <div><dt>Jugadores</dt><dd>2 en línea</dd></div>
+                    <div><dt>Controles</dt><dd><kbd>↑</kbd> <kbd>↓</kbd> o <kbd>W</kbd> <kbd>S</kbd></dd></div>
+                </dl>
+                <a class="play" href="games/gravity-dual/">Jugar Gravity Run Dual</a>
+            </div>
+        </article>
+    </main>
+
+    <script src="site.js"></script>
+</body>
+</html>

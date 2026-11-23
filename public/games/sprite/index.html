@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Run</title>
+    <meta name="description" content="Gravity Run: carrera galáctica contra la máquina invirtiendo la gravedad.">
+    <link rel="stylesheet" href="gravity.css">
+    <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../../back-link.css">
+</head>
+<body>
+    <a class="back-link" href="../../">BASTIAN GAMES</a>
+
+    <h1>GRAVITY RUN</h1>
+    <div class="stage">
+        <canvas id="gameCanvas" width="960" height="540" aria-label="Pista de Gravity Run"></canvas>
+        <div class="overlay" id="overlay" role="status">
+            <h2 id="overlayTitle"></h2>
+            <p id="overlayText"></p>
+            <p class="prompt" id="overlayPrompt"></p>
+        </div>
+    </div>
+    <p class="keys"><kbd>↑</kbd> o <kbd>W</kbd>: pista de arriba &nbsp;|&nbsp; <kbd>↓</kbd> o <kbd>S</kbd>: pista de abajo</p>
+
+    <script src="gravity-core.js"></script>
+    <script src="gravity-render.js"></script>
+    <script src="sprite.js"></script>
+</body>
+</html>

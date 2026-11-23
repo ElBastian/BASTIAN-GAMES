@@ -1,0 +1,21 @@
+{
+  "name": "bastian-games",
+  "version": "1.0.0",
+  "description": "BASTIAN GAMES: Pong vs Pared, Pong Dual, Gravity Run y Gravity Run Dual",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0",
+    "socket.io": "^4.8.4"
+  },
+  "devDependencies": {
+    "socket.io-client": "^4.8.4"
+  }
+}

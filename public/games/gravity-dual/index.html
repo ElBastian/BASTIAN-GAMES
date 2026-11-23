@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gravity Run Dual | BASTIAN GAMES</title>
+    <link rel="icon" href="../pong-dual/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="../pong-dual/style.css">
+    <link rel="stylesheet" href="../../back-link.css">
+</head>
+<body>
+    <a class="back-link" href="../../">BASTIAN GAMES</a>
+
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
+    <main>
+        <h2>Duelo: Gravity Run</h2>
+
+        <div class="hud">
+            <span><b id="role">Esperando rival…</b></span>
+            <span>📡 Latencia: <b id="ping">— ms</b></span>
+        </div>
+
+        <div class="stage">
+            <canvas id="game" width="960" height="540" aria-label="Pista de Gravity Run"></canvas>
+            <div id="overlay" class="overlay">
+                <div class="modal">
+                    <h3 id="overlay-title"></h3>
+                    <p id="overlay-sub"></p>
+                    <button id="btn-ready" type="button" hidden>Listo</button>
+                    <button id="btn-rematch" type="button" hidden>Revancha</button>
+                </div>
+            </div>
+        </div>
+
+        <p>Usa las teclas <b>W</b> / <b>S</b> o las <b>Flechas</b> para cambiar de pista</p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="../pong-dual/galaxy.js"></script>
+    <script src="../sprite/gravity-core.js"></script>
+    <script src="../sprite/gravity-render.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>

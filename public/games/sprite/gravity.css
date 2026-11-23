@@ -1,0 +1,91 @@
+@font-face {
+    font-family: "Tilt Neon";
+    src: url("../../fonts/tilt-neon-latin-400-normal.woff2") format("woff2");
+    font-display: swap;
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("../../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    src: url("../../fonts/atkinson-hyperlegible-latin-700-normal.woff2") format("woff2");
+    font-weight: 700;
+    font-display: swap;
+}
+:root {
+    --void: #05030f;
+    --ink: #f3efff;
+    --muted: #b9afdc;
+    --violet: #9d6bff;
+    --cyan: #4cc9ff;
+}
+* { box-sizing: border-box; }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-height: 100vh;
+    margin: 0;
+    padding: 52px 12px 12px;
+    color: var(--ink);
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    background:
+        radial-gradient(circle at 18% 12%, rgba(157, 107, 255, 0.24), transparent 42%),
+        radial-gradient(circle at 85% 88%, rgba(255, 61, 129, 0.14), transparent 40%),
+        var(--void);
+}
+h1 {
+    margin: 0;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-shadow: 0 0 16px var(--violet);
+}
+.stage {
+    position: relative;
+    width: min(100%, 960px, calc((100vh - 150px) * 16 / 9));
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border: 1px solid rgba(157, 107, 255, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 34px rgba(157, 107, 255, 0.35);
+}
+canvas { display: block; width: 100%; height: 100%; background: var(--void); }
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px;
+    text-align: center;
+    background: rgba(5, 3, 15, 0.62);
+}
+.overlay[hidden] { display: none; }
+.overlay h2 {
+    margin: 0;
+    font-family: "Tilt Neon", sans-serif;
+    font-size: clamp(30px, 7vw, 62px);
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    text-shadow: 0 0 22px var(--violet);
+}
+.overlay p { margin: 0; max-width: 34em; line-height: 1.45; font-size: clamp(14px, 2vw, 18px); }
+.overlay .prompt { color: var(--cyan); font-weight: 700; }
+.keys { margin: 0; color: var(--muted); font-size: 15px; text-align: center; }
+kbd {
+    padding: 1px 7px;
+    color: var(--ink);
+    font-family: inherit;
+    background: rgba(157, 107, 255, 0.22);
+    border: 1px solid rgba(157, 107, 255, 0.7);
+    border-radius: 4px;
+}

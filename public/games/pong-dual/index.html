@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Dual | BASTIAN GAMES</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../back-link.css">
+</head>
+<body>
+    <a class="back-link" href="../../">BASTIAN GAMES</a>
+
+    <canvas id="starfield" aria-hidden="true"></canvas>
+
+    <main>
+        <h2>Duelo: Pong Dual</h2>
+
+        <div class="hud">
+            <span><b id="role">Conectando…</b></span>
+            <span>📡 Latencia: <b id="ping">— ms</b></span>
+        </div>
+
+        <div class="stage">
+            <canvas id="game" width="800" height="450" aria-label="Campo de juego"></canvas>
+            <div id="overlay" class="overlay">
+                <div class="modal">
+                    <h3 id="overlay-title"></h3>
+                    <p id="overlay-sub"></p>
+                    <button id="btn-ready" type="button" hidden>Listo</button>
+                    <button id="btn-rematch" type="button" hidden>Revancha</button>
+                </div>
+            </div>
+        </div>
+
+        <p>Usa las teclas <b>W</b> / <b>S</b> o las <b>Flechas</b> para mover la paleta</p>
+    </main>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="galaxy.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
