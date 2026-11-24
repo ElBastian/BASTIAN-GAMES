@@ -18,6 +18,13 @@
   let storedId = null;
   try { storedId = sessionStorage.getItem('pongPlayerId'); } catch (_) {}
 
+  if (typeof io !== 'function') {
+    elTitle.textContent = 'Necesita el servidor';
+    elSub.textContent = 'Este duelo en línea solo funciona con el servidor del juego (npm start). Aquí puedes jugar los modos de un jugador.';
+    elRole.textContent = 'Sin servidor';
+    return;
+  }
+
   const socket = io({ auth: { playerId: storedId } });
 
   let mySide = null;
